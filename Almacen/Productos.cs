@@ -339,5 +339,10 @@ namespace Almacen
             // Recargar todos los datos en el DataGridView
             CargarDatosDataGridView();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

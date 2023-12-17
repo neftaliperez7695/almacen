@@ -19,6 +19,9 @@ namespace Almacen
         public Login()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Text = "Iniciar Session";
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
