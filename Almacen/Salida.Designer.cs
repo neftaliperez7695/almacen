@@ -189,6 +189,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.cboProducto);
             this.Controls.Add(this.txtCantidad);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Salida";
             this.Text = "Salida";
             this.Load += new System.EventHandler(this.Salida_Load);

@@ -124,6 +124,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.txtNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ubicacion";
             this.Text = "Ubicacion";
             this.Load += new System.EventHandler(this.Ubicacion_Load);

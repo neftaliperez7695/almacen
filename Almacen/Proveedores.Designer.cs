@@ -197,6 +197,7 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtDni);
             this.Controls.Add(this.txtNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Proveedores";
             this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.Proveedores_Load);

@@ -233,6 +233,7 @@
             this.Controls.Add(this.cboProveedor);
             this.Controls.Add(this.cboProducto);
             this.Controls.Add(this.dtEntradas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Entrada";
             this.Text = "Entrada";
             this.Load += new System.EventHandler(this.Entrada_Load);

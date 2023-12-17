@@ -51,7 +51,7 @@ namespace Almacen
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand("ObtenerSalidas", connection))
+                    using (SqlCommand command = new SqlCommand("ObtenerDetallesSalida", connection))
                     {
                         SqlDataAdapter da = new SqlDataAdapter(command);
                         DataTable dt = new DataTable();
@@ -72,7 +72,7 @@ namespace Almacen
             if (estadoActual == EstadoFormulario.Agregar)
             {
                 // Lógica para agregar un nuevo producto
-                agregarSalida();
+                AgregarSalida();
             }
             else if (estadoActual == EstadoFormulario.Editar)
             {
@@ -84,7 +84,7 @@ namespace Almacen
             RestablecerEstado();
         }
 
-        private void agregarSalida()
+        private void AgregarSalida()
         {
             int cantidad;
             string productoId = cboProducto.SelectedValue.ToString();
@@ -103,26 +103,50 @@ namespace Almacen
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand("InsertarSalida", connection))
+                    if (VerificarStockDisponible(connection, productoId, cantidad))
                     {
-                        command.CommandType = CommandType.StoredProcedure;
+                        using (SqlCommand command = new SqlCommand("InsertarSalida", connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
 
-                        // Añadir parámetros
-                        command.Parameters.AddWithValue("@ProductoID", productoId);
-                        command.Parameters.AddWithValue("@Cantidad", cantidad);
-                        command.Parameters.AddWithValue("@FechaSalida", fecha);
+                            // Añadir parámetros
+                            command.Parameters.AddWithValue("@ProductoID", productoId);
+                            command.Parameters.AddWithValue("@Cantidad", cantidad);
+                            command.Parameters.AddWithValue("@FechaSalida", fecha);
+                            command.Parameters.AddWithValue("@UsuarioID", Session.UsuarioID);
 
-                        command.ExecuteNonQuery();
+                            command.ExecuteNonQuery();
+                        }
 
                         MessageBox.Show("Producto agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //LimpiarCampos();
+                        LimpiarCampos();
                         CargarDatosDataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay suficiente stock disponible para la salida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al agregar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool VerificarStockDisponible(SqlConnection connection, string productoId, int cantidad)
+        {
+            // Consultar el stock actual del producto
+            string query = "SELECT Stock FROM Productos WHERE ProductoID = @ProductoID";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@ProductoID", productoId);
+
+                int stockActual = Convert.ToInt32(command.ExecuteScalar());
+
+                // Verificar si hay suficiente stock disponible
+                return stockActual >= cantidad;
             }
         }
 
@@ -326,8 +350,8 @@ namespace Almacen
                 estadoActual = EstadoFormulario.Editar;
                 btnAgregar.Text = "EDITAR";
 
-                string cantidad = dtgSalidas.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString();
-                string producto = dtgSalidas.Rows[e.RowIndex].Cells["ProductoNombre"].Value.ToString();                
+                string cantidad = dtgSalidas.Rows[e.RowIndex].Cells["CantidadSalida"].Value.ToString();
+                string producto = dtgSalidas.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();                
                 object fechaEntradaCellValue = dtgSalidas.Rows[e.RowIndex].Cells["FechaSalida"].Value;
 
                 if (fechaEntradaCellValue != null)

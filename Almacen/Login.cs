@@ -58,12 +58,28 @@ namespace Almacen
             {
                 connection.Open();
 
-                string query = "SELECT Password FROM Usuarios WHERE NombreUsuario = @Usuario";
+                string query = "SELECT UsuarioID, Password FROM Usuarios WHERE NombreUsuario = @Usuario";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Usuario", usuario);
 
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            int usuarioID = reader.GetInt32(reader.GetOrdinal("UsuarioID"));
+                            string contrasenaCifrada = reader.GetString(reader.GetOrdinal("Password"));
+
+                            if (VerificarHash(password, contrasenaCifrada))
+                            {
+                                // Almacena el ID del usuario en la sesión
+                                Session.UsuarioID = usuarioID;
+                                return true;
+                            }
+                        }
+                    }
+                    /*
                     // Obtener la contraseña cifrada desde la base de datos
                     string contrasenaCifrada = command.ExecuteScalar() as string;
 
@@ -71,7 +87,7 @@ namespace Almacen
                     {
                         // Comparar contraseñas cifradas
                         return VerificarHash(password, contrasenaCifrada);
-                    }
+                    }*/
                 }                
             }
             // si no encontro usaurio retornar false

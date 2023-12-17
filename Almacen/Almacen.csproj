@@ -66,6 +66,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlmacenDBDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AlmacenDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlmacenDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AlmacenDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlmacenDBDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +100,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductoUbicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductoUbicaciones.Designer.cs">
+      <DependentUpon>ProductoUbicaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedores.cs">
@@ -104,6 +120,7 @@
     <Compile Include="Salida.Designer.cs">
       <DependentUpon>Salida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session.cs" />
     <Compile Include="Ubicacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductoUbicaciones.resx">
+      <DependentUpon>ProductoUbicaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -192,6 +212,28 @@
     </None>
     <None Include="AlmacenDBDataSet3.xss">
       <DependentUpon>AlmacenDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AlmacenDBDataSet4.xsc">
+      <DependentUpon>AlmacenDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="AlmacenDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlmacenDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AlmacenDBDataSet4.xss">
+      <DependentUpon>AlmacenDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="AlmacenDBDataSet5.xsc">
+      <DependentUpon>AlmacenDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="AlmacenDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlmacenDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AlmacenDBDataSet5.xss">
+      <DependentUpon>AlmacenDBDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

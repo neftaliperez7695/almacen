@@ -15,3 +15,4 @@ F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Salida.resources
 F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Ubicacion.resources
 F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Principal.resources
 F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Usuarios.resources
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.ProductoUbicaciones.resources

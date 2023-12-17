@@ -167,8 +167,9 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dtGridProductos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Productos";
-            this.Text = "Form1";
+            this.Text = "Productos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProductos)).EndInit();
             this.ResumeLayout(false);

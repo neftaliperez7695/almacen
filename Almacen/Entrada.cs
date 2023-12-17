@@ -105,7 +105,7 @@ namespace Almacen
 
             if (!int.TryParse(txtCantidad.Text, out cantidad))
             {
-                MessageBox.Show("Ingrese valores válidos para cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese valores válidos para entrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -129,7 +129,7 @@ namespace Almacen
                         command.ExecuteNonQuery();
 
                         MessageBox.Show("Producto agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //LimpiarCampos();
+                        LimpiarCampos();
                         CargarDatosDataGridView();
                     }
                 }
@@ -272,9 +272,9 @@ namespace Almacen
                 estadoActual = EstadoFormulario.Editar;
                 btnAgregar.Text = "EDITAR";
 
-                string cantidad = dtEntradas.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString();
-                string producto = dtEntradas.Rows[e.RowIndex].Cells["ProductoNombre"].Value.ToString();
-                string proveedor = dtEntradas.Rows[e.RowIndex].Cells["ProveedorNombre"].Value.ToString();
+                string cantidad = dtEntradas.Rows[e.RowIndex].Cells["CantidadEntrada"].Value.ToString();
+                string producto = dtEntradas.Rows[e.RowIndex].Cells["NombreProducto"].Value.ToString();
+                string proveedor = dtEntradas.Rows[e.RowIndex].Cells["NombreProveedor"].Value.ToString();
                 object fechaEntradaCellValue = dtEntradas.Rows[e.RowIndex].Cells["FechaEntrada"].Value;
 
                 if (fechaEntradaCellValue != null)

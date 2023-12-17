@@ -43,19 +43,19 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(99, 42);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(223, 20);
             this.txtUsuario.TabIndex = 0;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(99, 96);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.Size = new System.Drawing.Size(223, 20);
             this.txtPassword.TabIndex = 1;
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(99, 143);
+            this.btnCrear.Location = new System.Drawing.Point(99, 151);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(75, 23);
             this.btnCrear.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(218, 151);
+            this.btnEliminar.Location = new System.Drawing.Point(196, 151);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
@@ -78,7 +78,7 @@
             this.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuarios.Location = new System.Drawing.Point(72, 261);
             this.dtgUsuarios.Name = "dtgUsuarios";
-            this.dtgUsuarios.Size = new System.Drawing.Size(415, 150);
+            this.dtgUsuarios.Size = new System.Drawing.Size(456, 150);
             this.dtgUsuarios.TabIndex = 4;
             this.dtgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuarios_CellClick);
             // 
@@ -113,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(626, 450);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
@@ -122,6 +122,7 @@
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
