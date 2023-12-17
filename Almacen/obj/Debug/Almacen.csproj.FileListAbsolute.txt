@@ -1,0 +1,17 @@
+F:\cvisual\WinFormsApp1\Almacen\Almacen\bin\Debug\Almacen.exe.config
+F:\cvisual\WinFormsApp1\Almacen\Almacen\bin\Debug\Almacen.exe
+F:\cvisual\WinFormsApp1\Almacen\Almacen\bin\Debug\Almacen.pdb
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.csproj.AssemblyReference.cache
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Properties.Resources.resources
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.csproj.GenerateResource.cache
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.csproj.CoreCompileInputs.cache
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.exe
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.pdb
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Login.resources
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Proveedores.resources
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Productos.resources
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Entrada.resources
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Salida.resources
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Ubicacion.resources
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Principal.resources
+F:\cvisual\WinFormsApp1\Almacen\Almacen\obj\Debug\Almacen.Usuarios.resources
