@@ -75,15 +75,15 @@ namespace Almacen
             return false;
         }
 
-        private bool VerificarHash(string input, string hash)
+        private bool VerificarHash(string contraena, string contrasenaCifrada)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
                 // Convertir la contraseña de entrada en un hash
-                string hashInput = ObtenerHash(input);
+                string hashInput = ObtenerHash(contraena);
 
                 // Comparar los hashes
-                return StringComparer.OrdinalIgnoreCase.Compare(hashInput, hash) == 0;
+                return StringComparer.OrdinalIgnoreCase.Compare(hashInput, contrasenaCifrada) == 0;
             }
         }
 
